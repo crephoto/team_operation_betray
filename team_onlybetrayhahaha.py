@@ -7,7 +7,7 @@
 ####
 
 team_name = 'ALWAYS BETRAY:)'
-strategy_name = 'Figure it out '
+strategy_name = 'Flow strat'
 strategy_description = 'Collude but '
     
 def move(my_history, their_history, my_score, their_score):
@@ -22,8 +22,9 @@ def move(my_history, their_history, my_score, their_score):
     '''
     if len(my_history)==0: # It's the first round; collude.
         return 'c'
-    elif my_history[-1]=='c':
-     return 'b'
-    #elif my_history[-2]=='b' and their_history[-1]=='c'
-
-    
+    elif my_history[-1]=='c' and their_history[-1]=='b':
+        return 'b' # Betray if they were severely punished last time,
+    elif my_history[-1]=='b' and their_history[-1]=='c':
+     return 'c'
+    elif my_history[-1]=='c' and their_history[-1]=='c':
+     return 'c'
