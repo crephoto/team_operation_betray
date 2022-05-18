@@ -8,7 +8,7 @@
 
 team_name = 'OperationBetray'
 strategy_name = 'Flow strat'
-strategy_description = 'Collude but '
+strategy_description = 'Flow into colluding with other bots'
     
 def move(my_history, their_history, my_score, their_score):
     '''Make my move based on the history with this player.
